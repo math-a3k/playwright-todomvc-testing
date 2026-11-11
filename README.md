@@ -20,3 +20,6 @@ npx playwright test --ui
 
 ## See some functionality not covered by the tests?
 Please open an issue, and it will be addressed.
+
+## Other implementations
+- https://github.com/microsoft/playwright/tree/main/examples/todomvc
