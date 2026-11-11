@@ -73,8 +73,7 @@ test('filtering of todos', async ({ page }) => {
   await expect(page.getByRole('listitem').filter({ hasText: 'todo 2' })).toBeVisible();
 
   // Teardown / Removing test data
-  // ---- Bug in Playwright?
+  await page.getByTestId('todo-item').hover();
   await page.getByRole('button', { name: 'Delete' }).click();
-  // await page.getByText("×").click();  // Does not work either
 
 });
