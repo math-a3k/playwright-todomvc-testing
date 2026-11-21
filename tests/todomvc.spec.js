@@ -48,7 +48,7 @@ test('filtering of todos', async ({ page }) => {
   // Mark 'todo 1' as done
   await page.getByRole('listitem').filter({ hasText: 'todo 1' }).getByLabel('Toggle Todo').check();
   // Assert the title has been checked
-  // ** Accesibility issue: Consecuence checked on DOM (CSS class), not in the AT
+  // Consequence checked on DOM (CSS class), not in the AT - see Issue #4
   await expect(page.getByRole('listitem').filter({ hasText: 'todo 1' })).toContainClass('completed');
 
   // Filter by "Active"
