@@ -455,7 +455,7 @@ test.describe('Routing and filters', () => {
 
   test('items completed while on "Active" disappear from the view', async ({ page }) => {
     await page.getByRole('link', { name: 'Active' }).click();
-    await page.getByTestId('todo-item').nth(0).getByRole('checkbox').check();
+    await page.getByTestId('todo-item').nth(0).getByRole('checkbox').click();
     await expect(page.getByTestId('todo-item')).toHaveCount(2);
     await expect(page.getByTestId('todo-count')).toHaveText('2 items left');
   });
